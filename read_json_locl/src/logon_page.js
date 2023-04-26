@@ -83,7 +83,11 @@ function LoginPage() {
           />
           <label htmlFor="username">Username:</label>
         </div>
-        {usFound ? <div>User found</div> : <div>User not found</div>}
+        {usFound ? (
+          <div className="bg-success">User found</div>
+        ) : (
+          <div className="bg-danger">User not found</div>
+        )}
         <div class="form-floating mt-3">
           <input
             type="password"
